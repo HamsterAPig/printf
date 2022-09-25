@@ -1,3 +1,12 @@
+# 修改说明
+
+给这个工程新增了`CMakeLists.txt`文件，用于在`CMake`环境下构建
+
+## 使用说明
+
+* 只需要在工程最顶层的`CMakeLists.txt`中加入`add_subdirectory(path/mcu_printf)`
+* 再在`add_executable`后面追加`target_link_libraries(${PROJECT_NAME}.elf PRIVATE MCUPrintfLib)`
+
 # A printf / sprintf Implementation for Embedded Systems
 
 [![Build Status](https://travis-ci.org/mpaland/printf.svg?branch=master)](https://travis-ci.org/mpaland/printf)
