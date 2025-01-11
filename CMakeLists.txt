@@ -4,8 +4,8 @@
 project(MCUPrintfLib
         LANGUAGES C)
 
-add_library(${PROJECT_NAME})
+add_library(${PROJECT_NAME} INTERFACE)
 target_sources(${PROJECT_NAME}
-        PRIVATE
+        INTERFACE
         ${CMAKE_CURRENT_LIST_DIR}/printf.c)
 target_include_directories(${PROJECT_NAME} INTERFACE ${CMAKE_CURRENT_LIST_DIR})
